@@ -1,21 +1,31 @@
+import ScrollRevealWrapper from "./common/ScrollRevealWrapper";
+import ExperienceDetails from "./components/Experience/ExperienceDetails";
 import Footer from "./components/Footer";
-import Header from "./components/Header"
-import ProfileBanner from "./components/Profile/ProfileBanner"
+import Header from "./components/Header";
+import ProfileBanner from "./components/Profile/ProfileBanner";
 import Skills from "./components/TeckStack/Skills";
-import { DarkTheme } from "./styles/Styles"
+import { DarkTheme } from "./styles/Styles";
 
 const App = () => {
+  const sections = [
+   
+    <ProfileBanner />,
+    <Skills />,
+    <ExperienceDetails />,
+   
+  ];
+
   return (
     <div className={`${DarkTheme.backGround} w-full min-h-screen pt-20`}>
-      <Header />
-      <ProfileBanner />
-      <Skills/>
-
-
-      <Footer/>
+       <Header />
+      {sections.map((Section, index) => (
+        <ScrollRevealWrapper key={index} index={index}>
+          {Section}
+        </ScrollRevealWrapper>
+      ))}
+       <Footer />,
     </div>
   );
 };
 
-
-export default App
+export default App;
