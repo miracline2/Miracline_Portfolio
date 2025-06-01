@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+body {
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+/* For customized scroll */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+
+.select-dropdown::-webkit-scrollbar-thumb {
+  background: #ced1db;
+  border-radius: 5px;
+}
+
+.select-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lite-scrollbar::-webkit-scrollbar-thumb {
+  background: #e7e7f1;
+  border-radius: 3px;
+}
+
+.lite-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-pagination-bullets {
+    display: none;
+  }
+}
+
+.clip-heart {
+  clip-path: url(#heart);
+  -webkit-clip-path: url(#heart);
+  overflow: hidden;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
