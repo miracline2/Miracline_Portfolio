@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TabContent, tabs } from "../../common";
 import { AnimatePresence, motion } from "framer-motion";
+import SkillsData from "./SkillsData";
 
 
 
@@ -34,26 +35,27 @@ const TechTabs = () => {
         ))}
       </div>
 
-      <div className=" text-white rounded-xl p-6 shadow-md text-center">
+      <div className=" rounded-xl p-6 shadow-md shadow-purple-500/30 text-center border-l-4 border-purple-600 relative">
         <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
           <AnimatePresence mode="wait">
             {TabContent[activeTab].map((item: any, index: number) => (
-              <motion.li
-                key={item}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="flex justify-center items-center"
-              >
-                <motion.img
-                  src={item}
-                  alt="Skillsimg"
-                  className="w-25 h-auto"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                />
-              </motion.li>
+              // <motion.li
+              //   key={item}
+              //   initial={{ opacity: 0, scale: 0.8 }}
+              //   animate={{ opacity: 1, scale: 1 }}
+              //   exit={{ opacity: 0, scale: 0.8 }}
+              //   transition={{ duration: 0.3, delay: index * 0.05 }}
+              //   className="flex justify-center items-center"
+              // >
+              //   <motion.img
+              //     src={item}
+              //     alt="Skillsimg"
+              //     className="w-25 h-auto"
+              //     whileHover={{ scale: 1.1 }}
+              //     transition={{ type: "spring", stiffness: 300 }}
+              //   />
+              // </motion.li>
+              <SkillsData item={item} index={index}/>
             ))}
           </AnimatePresence>
         </ul>

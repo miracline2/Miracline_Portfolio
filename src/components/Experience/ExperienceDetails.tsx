@@ -23,7 +23,7 @@ const ExperienceDetails = () => {
         {experiences.map((item, index) => (
           <motion.div
             key={index}
-            className=" rounded-xl shadow-lg p-6 md:p-10 border-l-4 border-purple-600 relative"
+            className=" rounded-xl shadow-lg p-6 md:p-10 border-l-4 border-purple-600 shadow-purple-500/30 relative"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
@@ -36,7 +36,7 @@ const ExperienceDetails = () => {
             <p className="text-sm md:text-base font-semibold text-gray-500">{item.companyName}</p>
             <p className="text-xs md:text-sm italic text-gray-400">{item.year}</p>
 
-            <ul className="list-disc ml-5 mt-4 text-sm md:text-base text-gray-700 dark:text-gray-200 space-y-2">
+            <ul className="list-disc ml-5 mt-4 text-[10px] md:text-base  space-y-2">
               {item.description.split(',').map((line, idx) => (
                 <li key={idx}>{line.trim()}</li>
               ))}

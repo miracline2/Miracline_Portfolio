@@ -9,8 +9,8 @@ const ProfileDetails = () => {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h1 className="text-xl md:text-3xl text-center md:mt-[8em] font-bold mb-2 text-white">Hi, This is Miracline A</h1>
-      <h2 className="text-sm md:text-xl text-gray-300">{About}</h2>
+      <h1 className="text-xl md:text-3xl text-center md:mt-[8em] font-bold mb-2 ">Hi, This is Miracline A</h1>
+      <h2 className="text-sm md:text-xl text-gray-500">{About}</h2>
     </motion.div>
   );
 };

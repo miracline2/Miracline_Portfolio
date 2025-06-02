@@ -9,7 +9,8 @@ import npm from '../assets/Images/npm.png';
 import vsCode from '../assets/Images/Vscode.png';
 import gitHub from '../assets/Images/gitHub.png';
 import azureDevops from '../assets/Images/AzureDevops.png';
-import type { IprojectDetails } from '../interface/interface';
+import tailwind from '../assets/Images/tailwind.png';
+import type { IprojectDetails, IskillData } from '../interface/interface';
 export const navLinks = [
   {
     id: "about",
@@ -80,8 +81,8 @@ const projects: IprojectDetails[] = [
 ];
 
 const tabs = ["TechSkill", "Tools"] as const;
-const TabContent = {
-  TechSkill: [reactJs, redux, typeScript, javaScript, HTML, css, nodeJs,],
+const TabContent:IskillData = {
+  TechSkill: [reactJs, redux, typeScript, javaScript, HTML, css, nodeJs,tailwind],
 
   Tools: [npm, gitHub, vsCode, azureDevops],
 

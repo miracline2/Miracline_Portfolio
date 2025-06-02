@@ -14,12 +14,12 @@ const ProjectData = ({
     <div className="h-full flex flex-col justify-between ">
      
         <h2 className={`text-lg md:text-2xl  font-semibold  text-center transition-colors duration-300 ${
-          isActive ? 'text-purple-300' : 'text-white'
+          isActive ? 'text-purple-300' : ''
         }`}>
           {title}
         </h2>
         <p className={`text-[10px] md:text-sm text-justify leading-relaxed transition-colors duration-300 ${
-          isActive ? 'text-gray-200' : 'text-gray-300'
+          isActive ? 'text-gray-200' : ''
         }`}>
           {description}
         </p>
