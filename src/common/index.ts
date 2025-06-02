@@ -84,7 +84,7 @@ const tabs = ["TechSkill", "Tools"] as const;
 const TabContent:IskillData = {
   TechSkill: [reactJs, redux, typeScript, javaScript, HTML, css, nodeJs,tailwind],
 
-  Tools: [npm, gitHub, vsCode, azureDevops],
+  Tools: [npm, gitHub, azureDevops,vsCode],
 
 };
 export const About = `  I'm a Frontend Developer, with 2.3 year of experience in developing

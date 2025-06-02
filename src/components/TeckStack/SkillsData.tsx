@@ -19,8 +19,8 @@ const SkillsData = ({item,index}:Iskills) => {
               >
                 <motion.img
                   src={item}
-                  alt="Skillsimg"
-                  className="w-10 h-auto md:w-25"
+                  alt="Skills-img"
+                  className="w-12 h-auto md:w-25"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 />
