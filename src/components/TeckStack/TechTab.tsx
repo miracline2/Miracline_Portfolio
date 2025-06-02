@@ -49,7 +49,7 @@ const TechTabs = () => {
                 <motion.img
                   src={item}
                   alt="Skillsimg"
-                  className="w-full max-w-[100px] md:max-w-[150px] h-auto"
+                  className="w-25 h-auto"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 />
