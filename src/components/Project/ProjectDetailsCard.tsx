@@ -40,9 +40,9 @@ const ProjectDetailsCard = () => {
   };
 
   return (
-    <div className="w-full p-4 mt-[10em]">
+    <div className="w-full h-screen mt-[10em]">
       <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center ">My Projects</h2>
-      <div className="mt-10 sm:px-8 md:px-0">
+      <div className="mt-10 sm:px-8 md:ml-15">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={(swiper) => setSelectedIndex(swiper.activeIndex)}

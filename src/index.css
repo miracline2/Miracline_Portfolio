@@ -5,7 +5,7 @@ body {
   font-family: "Comic Relief", system-ui;
   font-weight: 400;
   overflow-x: hidden;
-  scrol: 'smooth'
+   scroll-behavior: smooth;
 }
 
 .swiper-pagination {

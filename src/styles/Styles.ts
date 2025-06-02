@@ -9,3 +9,5 @@ export const LightTheme ={
   shadow-md `,
   backGround:`bg-[#FDF6F0] text-[#000]`
 }
+
+export const tittle = `text-2xl md:text-4xl font-bold mb-4 text-center`

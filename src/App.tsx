@@ -9,6 +9,7 @@ import ResumeViewer from "./components/Resume/ResumeViewer";
 import Skills from "./components/TeckStack/Skills";
 import { ThemeContext } from "./contextAPI/ThemeContext";
 import { DarkTheme, LightTheme } from "./styles/Styles";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
    const { theme } = useContext(ThemeContext);
@@ -18,12 +19,54 @@ const App = () => {
     <Skills />,
     <ExperienceDetails />,
     <ProjectDetails/>,
-    <ResumeViewer/>
+   <ResumeViewer/>,
    
   ];
 
   return (
-
+<>
+   <Toaster
+        position="top-right"
+        reverseOrder={false}
+        gutter={8}
+        containerClassName=""
+        containerStyle={{}}
+        toastOptions={{
+          
+          className: '',
+          duration: 4000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+            padding: '16px',
+            borderRadius: '8px',
+          },
+         
+          success: {
+            duration: 4000,
+            style: {
+              background: '#10b981',
+              color: 'white',
+            },
+            iconTheme: {
+              primary: 'white',
+              secondary: '#10b981',
+            },
+          },
+          
+          error: {
+            duration: 4000,
+            style: {
+              background: '#ef4444',
+              color: 'white',
+            },
+            iconTheme: {
+              primary: 'white',
+              secondary: '#ef4444',
+            },
+          },
+        }}
+      />
     <div className={`
     ${ theme==='Dark'?
       DarkTheme.backGround : LightTheme.backGround} w-full min-h-screen pt-20`}>
@@ -35,6 +78,7 @@ const App = () => {
       ))}
        <Footer />,
     </div>
+</>
   );
 };
 
