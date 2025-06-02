@@ -58,15 +58,19 @@ const ProjectDetailsCard = () => {
               slidesPerView: 1.03,
               spaceBetween: 1,
             },
-            300: {
+              320: {
+              slidesPerView: 1.05,
+              spaceBetween: 15
+            },
+            375: {
+              slidesPerView: 1.1,
+              spaceBetween: 20
+            },
+            425: {
               slidesPerView: 1.2,
-              spaceBetween: 3,
+              spaceBetween: 20
             },
-
-            390: {
-              slidesPerView: 1.3,
-              spaceBetween: 4,
-            },
+          
             430: {
               slidesPerView: 1.5,
               spaceBetween: 4,
