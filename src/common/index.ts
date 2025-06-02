@@ -9,6 +9,7 @@ import npm from '../assets/Images/npm.png';
 import vsCode from '../assets/Images/Vscode.png';
 import gitHub from '../assets/Images/gitHub.png';
 import azureDevops from '../assets/Images/AzureDevops.png';
+import type { IprojectDetails } from '../interface/interface';
 export const navLinks = [
   {
     id: "about",
@@ -52,24 +53,32 @@ Mini project - Create Website using Html/ css and developed coin tossing game;  
 ];
 
 
-const projects = [
+const projects: IprojectDetails[] = [
   {
-    title: " Freshcots",
-    description: " Fresh cots is a Job Portal Application. Mainly focus on Freshers, Switchers, Returners and Interns.",
-    year: "Oct 2024 - Present ",
-    technologies: ["React", "Tailwind CSS", "Redux"]
-  },
-  {
-    name: "Camp@Arus",
+    title: "Freshcots",
     description:
-      ` One stop employee portal, which acts as an app store for all other applications that are used 
-within the organization. Regular organization activities such as on-board and exit check-list, 
-user management, role base security, application access control, etc are under one roof.`,
-    year: "Jan 2024 - Oct-2024 ",
-    technologies: ["Angular", "Angular Material", "SCSS", "Node.JS", "React", "Tailwind CSS"]
+      `Worked as a Frontend Developer handling both Candidate and Expert profiles. 
+      Implemented functionalities for updating profile details with progress tracking,
+       uploading and deleting profile images. Ensured Experts can’t schedule multiple calls with the same Candidate post-call
+       , and integrated a skill rating feature where Experts rate Candidates. The ratings update dynamically in the Candidate's radar chart.`,
+    technologies: ["React Js", "Redux", "Tailwind CSS"]
   },
-
+  {
+    title: "Camp@Arus",
+    description:
+      `Worked as a Frontend and API Developer. Developed responsive Candidate and Admin screens. Built key features like onboarding, user management, 
+      and role-based access within a unified internal portal for employees.`,
+    technologies: ["React Js", "Redux", "Tailwind CSS", "Node.JS"]
+  },
+  {
+    title: "Forecast",
+    description:
+      `Worked as a Support Engineer on both Frontend and API.
+       Focused on data filtering and updating percentage values dynamically in bar charts to reflect data metrics accurately.`,
+    technologies: ["React Js", "Redux", "Tailwind CSS", "Node.JS"]
+  }
 ];
+
 const tabs = ["TechSkill", "Tools"] as const;
 const TabContent = {
   TechSkill: [reactJs, redux, typeScript, javaScript, HTML, css, nodeJs,],

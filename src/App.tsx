@@ -3,6 +3,7 @@ import ExperienceDetails from "./components/Experience/ExperienceDetails";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ProfileBanner from "./components/Profile/ProfileBanner";
+import ProjectDetails from "./components/Project/ProjectDetailsCard";
 import Skills from "./components/TeckStack/Skills";
 import { DarkTheme } from "./styles/Styles";
 
@@ -12,6 +13,7 @@ const App = () => {
     <ProfileBanner />,
     <Skills />,
     <ExperienceDetails />,
+    <ProjectDetails/>
    
   ];
 
