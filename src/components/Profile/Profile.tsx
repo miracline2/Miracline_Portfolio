@@ -1,5 +1,5 @@
 
-import profile from '../../assets/Images/Miracline.jpg';
+import profile from '../../assets/Images/Mirac.jpg';
 import { motion } from "framer-motion";
 
 const Profile = () => {
