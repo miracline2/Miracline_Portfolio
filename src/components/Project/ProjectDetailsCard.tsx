@@ -41,7 +41,7 @@ const ProjectDetailsCard = () => {
 
   return (
     <div className="w-full p-4">
-      <h2 className="text-2xl font-bold mb-4 text-center text-white">My Projects</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center ">My Projects</h2>
       <div className="sm:px-8 md:px-0">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -94,7 +94,7 @@ const ProjectDetailsCard = () => {
               <div
                 onClick={() => handleCardClick(index)}
                 className={`
-                  bg-[#1e1e1e] text-white shadow-xl rounded-xl p-6 
+                  shadow-xl rounded-xl p-6 
                   flex flex-col h-[400px] w-full justify-between
                   transition-all duration-300 ease-in-out
                   cursor-pointer

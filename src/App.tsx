@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import ScrollRevealWrapper from "./common/ScrollRevealWrapper";
 import ExperienceDetails from "./components/Experience/ExperienceDetails";
 import Footer from "./components/Footer";
@@ -6,9 +7,11 @@ import ProfileBanner from "./components/Profile/ProfileBanner";
 import ProjectDetails from "./components/Project/ProjectDetailsCard";
 import ResumeViewer from "./components/Resume/ResumeViewer";
 import Skills from "./components/TeckStack/Skills";
-import { DarkTheme } from "./styles/Styles";
+import { ThemeContext } from "./contextAPI/ThemeContext";
+import { DarkTheme, LightTheme } from "./styles/Styles";
 
 const App = () => {
+   const { theme } = useContext(ThemeContext);
   const sections = [
    
     <ProfileBanner />,
@@ -20,7 +23,10 @@ const App = () => {
   ];
 
   return (
-    <div className={`${DarkTheme.backGround} w-full min-h-screen pt-20`}>
+
+    <div className={`
+    ${ theme==='Dark'?
+      DarkTheme.backGround : LightTheme.backGround} w-full min-h-screen pt-20`}>
        <Header />
       {sections.map((Section, index) => (
         <ScrollRevealWrapper key={index} index={index}>

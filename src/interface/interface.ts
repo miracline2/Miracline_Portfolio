@@ -3,3 +3,8 @@ export interface IprojectDetails {
   description: string;
   technologies: string[];
 }
+
+export interface IskillData{
+  TechSkill:string[];
+  Tools:string[]
+}
