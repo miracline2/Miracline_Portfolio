@@ -8,10 +8,7 @@ import { DarkTheme, LightTheme } from "../styles/Styles";
 
 const Footer = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
-  console.log('theme',theme);
-  
-
-
+ 
 
   return (
     <footer className="fixed bottom-4 right-4 z-50">

@@ -62,14 +62,14 @@ const projects: IprojectDetails[] = [
       Implemented functionalities for updating profile details with progress tracking,
        uploading and deleting profile images. Ensured Experts can’t schedule multiple calls with the same Candidate post-call
        , and integrated a skill rating feature where Experts rate Candidates. The ratings update dynamically in the Candidate's radar chart.`,
-    technologies: ["React Js", "Redux", "Tailwind CSS"]
+    technologies: ["React Js", "Redux", "Tailwind CSS","Azure Devops"]
   },
   {
     title: "Camp@Arus",
     description:
       `Worked as a Frontend and API Developer. Developed responsive Candidate and Admin screens. Built key features like onboarding, user management, 
-      and role-based access within a unified internal portal for employees.`,
-    technologies: ["React Js", "Redux", "Tailwind CSS", "Node.JS"]
+      and role-based access within a unified internal portal for employees, Also Worked to create a web service in Azure portal to Deployed the application through CI/CD pipeline.`,
+    technologies: ["React Js", "Redux", "Tailwind CSS", "Node.JS","Azure Portal","Azure Devops"]
   },
   {
     title: "Forecast",
@@ -91,5 +91,8 @@ export const About = `  I'm a Frontend Developer, with 2.3 year of experience in
 dynamic and responsive web applications.`
 export const AboutMyself = `I am a passionate and detail-oriented Frontend Developer with 2.3 years of experience in building user-friendly,
  responsive, and dynamic web applications. My expertise lies in leveraging modern  technologies like React.js, Redux, JavaScript, HTML5, CSS3, and Tailwind CSS to create seamless and engaging user experiences.In my current role, I have collaborated closely with cross-functional teams to deliver scalable and performance-driven solutions, ensuring alignment with client goals and industry best practices. My ability to transform complex requirements into intuitive designs and robust implementations has consistently contributed to the success of projects.`
-
-export { experiences, projects, tabs, TabContent };
+  const socialLinks = {
+    github: 'https://github.com/miracline2',
+    linkedin: 'https://www.linkedin.com/in/miracline'
+  };
+export { experiences, projects, tabs, TabContent,socialLinks };

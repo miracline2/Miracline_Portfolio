@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { experiences } from "../../common";
+import { tittle } from "../../styles/Styles";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -17,7 +18,7 @@ const fadeInUp = {
 const ExperienceDetails = () => {
   return (
     <div className="w-full max-w-5xl mx-auto px-4 py-10">
-      <h2 className="text-center font-bold text-xl md:text-4xl mb-10">My Experience</h2>
+      <h2  className={`${tittle}`}>My Experience</h2>
 
       <div className="flex flex-col gap-10 md:gap-16">
         {experiences.map((item, index) => (
