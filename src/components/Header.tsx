@@ -3,13 +3,17 @@ import MenuIcon from '../assets/Icons/Menu.svg'
 import { ThemeContext } from "../contextAPI/ThemeContext";
 import { useContext } from "react";
 import NavBar from "../common/NavBar/NavBar";
+import { Link } from "react-scroll";
 
 const Header = () => {
     const { theme } = useContext(ThemeContext);
     return (
       <header className={`${  theme==='Dark'?
         DarkTheme.disPlayHeader : LightTheme.disPlayHeader} fixed top-0 w-full z-50 flex items-center justify-between px-4`}>
-  <h3 className="font-bold text-xl md:text-4xl cursor-pointer">Miracline</h3>
+  <Link 
+   to="about"
+  
+  className="font-bold text-xl md:text-4xl cursor-pointer">Miracline</Link>
   <div  className="hidden md:block">
     <NavBar/>
   </div>
