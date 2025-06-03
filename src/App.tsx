@@ -8,31 +8,31 @@ import ProjectDetails from "./components/Project/ProjectDetailsCard";
 import ResumeViewer from "./components/Resume/ResumeViewer";
 import Skills from "./components/TeckStack/Skills";
 import { ThemeContext } from "./contextAPI/ThemeContext";
-import { DarkTheme, LightTheme } from "./styles/Styles";
+import { DarkTheme, FloatingTheme, LightTheme } from "./styles/Styles";
 import { Toaster } from "react-hot-toast";
 
 const App = () => {
-   const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const sections = [
-   
+
     <ProfileBanner />,
     <Skills />,
     <ExperienceDetails />,
-    <ProjectDetails/>,
-   <ResumeViewer/>,
-   
+    <ProjectDetails />,
+    <ResumeViewer />,
+
   ];
 
   return (
-<>
-   <Toaster
+    <>
+      <Toaster
         position="top-right"
         reverseOrder={false}
         gutter={8}
         containerClassName=""
         containerStyle={{}}
         toastOptions={{
-          
+
           className: '',
           duration: 4000,
           style: {
@@ -41,7 +41,7 @@ const App = () => {
             padding: '16px',
             borderRadius: '8px',
           },
-         
+
           success: {
             duration: 4000,
             style: {
@@ -53,7 +53,7 @@ const App = () => {
               secondary: '#10b981',
             },
           },
-          
+
           error: {
             duration: 4000,
             style: {
@@ -67,18 +67,22 @@ const App = () => {
           },
         }}
       />
-    <div className={`
-    ${ theme==='Dark'?
-      DarkTheme.backGround : LightTheme.backGround} w-full min-h-screen pt-20`}>
-       <Header />
-      {sections.map((Section, index) => (
-        <ScrollRevealWrapper key={index} index={index}>
-          {Section}
-        </ScrollRevealWrapper>
-      ))}
-       <Footer />,
-    </div>
-</>
+      <div className="relative w-full min-h-screen">
+        <FloatingTheme />
+        <div className={`
+    ${theme === 'Dark' ?
+            DarkTheme.backGround : LightTheme.backGround} w-full min-h-screen pt-20`}>
+
+          <Header />
+          {sections.map((Section, index) => (
+            <ScrollRevealWrapper key={index} index={index}>
+              {Section}
+            </ScrollRevealWrapper>
+          ))}
+          <Footer />,
+        </div>
+      </div>
+    </>
   );
 };
 

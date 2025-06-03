@@ -17,10 +17,10 @@ const fadeInUp = {
 
 const ExperienceDetails = () => {
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-10">
-      <h2  className={`${tittle}`}>My Experience</h2>
-
-      <div className="flex flex-col gap-10 md:gap-16">
+    <div className="w-full max-w-5xl mx-auto px-4 py-10" id="work">
+      <h2  className={`${tittle} md:mb-5`}>My Experience</h2>
+   <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+      <div className="flex flex-col gap-10 mt-4 md:gap-16">
         {experiences.map((item, index) => (
           <motion.div
             key={index}
@@ -56,6 +56,30 @@ const ExperienceDetails = () => {
           </motion.div>
         ))}
       </div>
+      <motion.div 
+                    className="mt-12 flex justify-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1 }}
+                >
+                    <div className="flex space-x-2">
+                        {[...Array(3)].map((_, i) => (
+                            <motion.div
+                                key={i}
+                                className="w-2 h-2 bg-purple-400 rounded-full"
+                                animate={{
+                                    scale: [1, 1.5, 1],
+                                    opacity: [0.5, 1, 0.5],
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    delay: i * 0.3,
+                                }}
+                            />
+                        ))}
+                    </div>
+                </motion.div>
     </div>
   );
 };
