@@ -17,7 +17,7 @@ const Profile = () => {
           <img
             src={profile}
             alt="Profile"
-            className="w-50 h-62 md:w-100 md:h-150 object-cover"
+            className="w-50 h-62 md:w-100 md:h-120 object-cover"
           />
         </div>
       </div>

@@ -162,3 +162,15 @@ body {
 .animate-fade-in {
   animation: fade-in 0.5s ease-out;
 }
+/* Add this to your global CSS file or in a style tag */
+.active {
+  border-bottom-color: #9333ea !important; /* Purple underline */
+  color: #9333ea; /* Optional: change text color when active */
+}
+
+/* Alternative approach using text decoration */
+.active-underline {
+  text-decoration: underline;
+  text-decoration-color: #9333ea;
+  text-underline-offset: 4px;
+}
