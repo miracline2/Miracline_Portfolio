@@ -45,6 +45,7 @@ const ProjectDetailsCard = () => {
       <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center ">My Projects</h2>
        <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
       <div className="mt-10 sm:px-8 md:ml-15">
+       
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onSlideChange={(swiper) => setSelectedIndex(swiper.activeIndex)}
@@ -92,7 +93,7 @@ const ProjectDetailsCard = () => {
           }}
         >
           {projects.map((project: IprojectDetails, index: number) => (
-            <SwiperSlide key={index} className="pb-12">
+            <SwiperSlide key={index} className="pb-5">
               <div
                 onClick={() => handleCardClick(index)}
                 className={`
@@ -109,9 +110,14 @@ const ProjectDetailsCard = () => {
               >
                 <ProjectData {...project} />
               </div>
+                <span className='flex justify-center md:hidden text-center mt-5 md:mt-0'>
+                   Swipe {index === projects.length - 1 ? '👈' : '👉'}
+                   </span>
             </SwiperSlide>
           ))}
+       
         </Swiper>
+
       </div>
       <motion.div 
                     className=" md:flex justify-center hidden "
