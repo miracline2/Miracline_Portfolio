@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { skills } from "../../common"
+import { skillNames, skills } from "../../common"
 import { useContext } from "react";
 import { ThemeContext } from "../../contextAPI/ThemeContext";
 import { DarkTheme, LightTheme } from "../../styles/Styles";
@@ -36,18 +36,15 @@ const SkillsDeskVer = () => {
         }
     }
 
-    // Skill names mapping (you can customize these based on your actual skills)
-    const skillNames = [
-        "React", "Redux", "TypeScript", "JavaScript",
-        "HTML5", "CSS3", "Node.js", "Tailwind","npm","GitHub","Azure Devops","VS Code"
-    ]
+    
+   
 
     return (
         <div className="w-full h-screen relative">
            
 
             <div className="relative z-10 p-5 h-full flex flex-col">
-                {/* Enhanced Header */}
+               
          
                 {/* Skills Grid */}
                 <motion.div 
