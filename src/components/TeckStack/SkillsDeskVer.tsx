@@ -47,12 +47,13 @@ const SkillsDeskVer = () => {
                
          
                 {/* Skills Grid */}
-                <motion.div 
-                    className=" grid grid-cols-2 md:grid-cols-6 gap-9 place-items-center max-w-6xl mx-auto"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
+               <motion.div 
+    className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-6 place-items-center w-full max-w-xs sm:max-w-sm md:max-w-4xl lg:max-w-6xl mx-auto"
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+>
+
                     {skills.map((skill, index) => (
                         <motion.div
                             key={index}
@@ -77,7 +78,8 @@ const SkillsDeskVer = () => {
                                     <motion.img
                                         src={skill}
                                         alt={`${skillNames[index] || 'Skill'}`}
-                                        className="w-16 h-16 mb-4 filter drop-shadow-lg"
+                                       className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mb-2 sm:mb-3 md:mb-4 filter drop-shadow-lg"
+
                                         whileHover={{ 
                                             rotateY: 180,
                                             scale: 1.1
@@ -91,7 +93,8 @@ const SkillsDeskVer = () => {
                                     
                                     {/* Skill Name */}
                                     <motion.h3 
-                                        className=" font-semibold text-center group-hover:text-purple-300 transition-colors duration-300"
+                                       className="text-xs sm:text-sm md:text-md font-semibold text-center group-hover:text-purple-300 transition-colors duration-300"
+
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         transition={{ delay: 0.2 }}
@@ -110,7 +113,7 @@ const SkillsDeskVer = () => {
 
                             {/* Floating skill level indicator */}
                             <motion.div
-                                className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-xs font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                className="absolute -top-2 -right-2 w-3 h-3 md:w-6 md:h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-xs font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                 initial={{ scale: 0, rotate: -180 }}
                                 whileHover={{ scale: 1, rotate: 0 }}
                                 transition={{ type: "spring", stiffness: 300 }}

@@ -17,7 +17,7 @@ const fadeInUp = {
 
 const ExperienceDetails = () => {
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-10" id="work">
+    <div className="w-full max-w-5xl mx-auto px-4 py-10 mt-[30em] md:mt-0" id="work">
       <h2  className={`${tittle} md:mb-5`}>My Experience</h2>
    <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
       <div className="flex flex-col gap-10 mt-4 md:gap-16">

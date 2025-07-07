@@ -40,4 +40,4 @@ export const LightTheme = {
   skillCardBg:`relative bg-gradient-to-br from-gray-100 to-gray-200 shadow-purple-500/30 backdrop-blur-md rounded-2xl p-8 border border-gray-300/50 shadow-2xl group-hover:border-purple-500/50 transition-all duration-300`
 };
 
-export const tittle = `text-2xl md:text-4xl font-bold mb-2 text-center`;
+export const tittle = `text-xl md:text-4xl font-bold mb-2 text-center`;
